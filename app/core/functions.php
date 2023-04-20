@@ -69,22 +69,6 @@ function get_image(string $file, string $type = 'post'): string
     }
 }
 
-// TODO:
-// /* Create absolute path for images */
-// function URL($key): mixed
-// {
-//     switch ($key) {
-//         case 'page':
-//         case 0:
-//             return APP('URL')[0] ?? null;
-//             break;
-
-//         default:
-//             # code...
-//             break;
-//     }
-// }
-
 /* Return pagination links */
 function get_pagination_var(): array
 {
@@ -97,27 +81,26 @@ function get_pagination_var(): array
     return $vars;
 }
 
-// TODO: Core\Session()... use namespace
 /* Save or display a saved message to the user */
-// function message(string $msg = null, bool $clear = false)
-// {
-//     $ses = new Core\Session();
+function message(string $msg = null, bool $clear = false)
+{
+    $ses = new Core\Session();
 
-//     if (!empty($msg)) {
-//         $ses->set('message', $msg);
-//     } else
-//     if (!empty($ses->get('message'))) {
-//         $msg = $ses->get('message');
+    if (!empty($msg)) {
+        $ses->set('message', $msg);
+    } else
+    if (!empty($ses->get('message'))) {
+        $msg = $ses->get('message');
 
-//         if ($clear) {
-//             $ses->pop('message');
-//         }
+        if ($clear) {
+            $ses->pop('message');
+        }
 
-//         return $msg;
-//     }
+        return $msg;
+    }
 
-//     return false;
-// }
+    return false;
+}
 
 /* Retain the old text values */
 // 
