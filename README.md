@@ -101,7 +101,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Credits
 
 Developed by Tarek Alnaggar © April, 2023
-
-## License
-
-This project is open-sourced software licensed under the MIT license.
